@@ -8,5 +8,5 @@ node_modules/
 # If you want to keep generated reports in source control, the following
 # report directories were removed from ignore so they can be committed:
 # - playwright-report/
-# - allure-results/
-# - allure-report/
+allure-results/
+allure-report/

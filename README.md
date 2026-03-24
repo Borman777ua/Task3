@@ -16,6 +16,8 @@ Open a bash terminal in the project root (Windows: Git Bash, WSL, or bash.exe) a
 npm install
 # install Playwright browsers
 npx playwright install
+# If running in CI (or to match the project's GitHub Actions), install with dependencies:
+npx playwright install --with-deps
 ```
 
 If the project uses a project-specific script to install browsers, run that instead (for example, `npm run install:browsers`).
@@ -44,6 +46,22 @@ Open Playwright test runner UI (if a script exists in package.json):
 
 ```bash
 npm run openUI
+
+## CI / GitHub Actions
+
+- A GitHub Actions workflow is included at `.github/workflows/playwright.yml`.
+- The workflow runs tests with `npm ci`, installs browsers with `npx playwright install --with-deps`,
+  and runs `npx playwright test`. It now also supports manual runs from the Actions UI (workflow_dispatch).
+
+## Reporting / Allure
+
+- If you generate Allure reports locally, you may run project-specific npm scripts. Example used in this session:
+
+```bash
+npm run allure:generate
+```
+
+Adjust reporting commands to match scripts in `package.json`.
 ```
 
 ## Additional notes

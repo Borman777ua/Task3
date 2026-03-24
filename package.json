@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test",
-    "openUI": "npx playwright test --ui"
+    "test": "npx playwright test --reporter=line,allure-playwright",
+    "openUI": "npx playwright test --ui",
+    "allure:generate": "npx allure generate ./allure-results -o ./allure-report --clean",
+    "allure:open": "npx allure open ./allure-report",
+    "allure:serve": "npx allure serve ./allure-results"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +15,10 @@
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.58.2",
-    "@types/node": "^25.5.0"
+    "@types/node": "^25.5.0",
+    "allure-commandline": "^2.38.1"
+  },
+  "dependencies": {
+    "allure-playwright": "^3.6.0"
   }
 }

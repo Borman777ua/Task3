@@ -1,10 +1,12 @@
 
 # Playwright
 node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
+# (keep Playwright caches and auth ignored)
 /playwright/.cache/
 /playwright/.auth/
-/allure-results/
-allure-report/
+
+# If you want to keep generated reports in source control, the following
+# report directories were removed from ignore so they can be committed:
+# - playwright-report/
+# - allure-results/
+# - allure-report/

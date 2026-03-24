@@ -47,21 +47,11 @@ Open Playwright test runner UI (if a script exists in package.json):
 ```bash
 npm run openUI
 
-## CI / GitHub Actions
+## CI / GitHub Actions and reporting
 
-- A GitHub Actions workflow is included at `.github/workflows/playwright.yml`.
-- The workflow runs tests with `npm ci`, installs browsers with `npx playwright install --with-deps`,
-  and runs `npx playwright test`. It now also supports manual runs from the Actions UI (workflow_dispatch).
-
-## Reporting / Allure
-
-- If you generate Allure reports locally, you may run project-specific npm scripts. Example used in this session:
-
-```bash
-npm run allure:generate
-```
-
-Adjust reporting commands to match scripts in `package.json`.
+- A GitHub Actions workflow is included at `.github/workflows/playwright.yml` and supports manual runs from the Actions UI (`workflow_dispatch`).
+- The workflow installs dependencies and Playwright browsers and runs tests with the Playwright HTML reporter.
+- The workflow uploads the generated Playwright HTML report (`playwright-report/`) as an artifact you can download from the run.
 ```
 
 ## Additional notes

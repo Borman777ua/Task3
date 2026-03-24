@@ -7,7 +7,8 @@
     "openUI": "npx playwright test --ui",
     "allure:generate": "npx allure generate ./allure-results -o ./allure-report --clean",
     "allure:open": "npx allure open ./allure-report",
-    "allure:serve": "npx allure serve ./allure-results"
+    "allure:serve": "npx allure serve ./allure-results",
+    "allure:report": "npm run allure:generate && npm run allure:open"
   },
   "keywords": [],
   "author": "",

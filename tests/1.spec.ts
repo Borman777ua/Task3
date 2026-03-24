@@ -3,7 +3,8 @@ import { test } from "@playwright/test";
 import { PageManager } from "../pageObjects/DochubPageObject/PageObjectManager";
 
 
-// Scenario: 1. Open the login page. 
+// Scenario:
+// 1. Open the login page. 
 // 2. Enter an invalid email and password. 
 // 3. Click the login button. 
 // 4. Verify (Assert) that the appropriate authorization error message appears on the screen.
